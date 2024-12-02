@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard</title>
+	<style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color:black;            
+            color: whitesmoke;
+        }
+
+        .header {
+            background-color: darkred;
+             padding: 10px;
+             position: sticky;
+            top: 0;
+
+        }
+
+/*EMR*/
+
+        h5{
+            color: royalblue;
+            margin-top: 1px;
+            margin-left: 6px;
+        } 
+
+        
+
+/* search */
+
+
+        .search {
+             float: right;
+             display: inline-flex;
+            margin-right: 455px;
+            margin-top: -49px;
+            height: 32px;
+
+        }
+
+        .search img {
+            height: 30px;
+            width: 40px;
+        }
+
+        .header img {
+            height: 33px;
+            width: 42px;
+        }
+
+
+
+
+/*SIDE BAR*/
+
+        .sidebar {
+            width: 20%;
+            height: 100vh;
+            background-color: ghostwhite;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            position: fixed;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #004d1a;
+            padding: 15px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+            color: #fff;
+        }
+
+        .main {
+            margin-left: 20%;
+            padding: 20px;
+        }
+
+        .main img{
+            height: 37px;
+            width: 47px;
+        }
+
+        h1{
+
+        }
+
+        
+
+        .top-bar {
+            display: flex;
+
+            align-items: center;
+           
+    
+        }
+
+        
+/*DIAGRAM*/
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 22%;
+            margin: 10px 0;
+        }
+
+        .stat-box h2 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .stat-box p {
+            margin: 10px 0 0;
+            font-size: 16px;
+        }
+
+
+        .bar-chart {
+            margin-top: 30px;
+        }
+
+        .bar-chart h2 {
+            margin-bottom: 20px;
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .bar span {
+            width: 100px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .bar div {
+            background-color: yellow;
+            height: 20px;
+            width: 0;
+            text-align: right;
+            line-height: 20px;
+            color: #444;
+            border-radius: 5px;
+            animation: grow 1s forwards;
+        }
+
+        @keyframes grow {
+            to {
+                width: var(--bar-width);
+            }
+        }
+
+
+/* CALENDAR*/
+
+
+        .calendar {
+            margin-top: 30px;
+        }
+
+        .calendar h2 {
+            margin-bottom: 20px;
+        }
+
+        .calendar table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .calendar th, .calendar td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #444;
+        }
+
+        .calendar th {
+            background-color: #555;
+        }
+
+        .calendar td {
+            background-color: #333;
+        }
+
+
+
+
+/*PROFILE PIC*/
+
+.profile-container {
+  display: flex;
+  align-items: center;  
+  font-family: Arial, sans-serif;
+  flex-direction:row-reverse;
+  margin-bottom: -1px;
+  margin-top: -86px;
+
+}
+
+
+.profile-photo {
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+
+}
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.profile-info h2 {
+  font-size: 25px;
+  color: white;
+  margin-left: 1105px;
+
+
+}
+.profile-info a{
+    text-decoration: none;
+}
+
+
+
+      
+
+/*ICON SIDE*/
+
+.Ho img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+
+}
+
+.me img{
+    height: 30px;
+    width: 30px;
+    margin-left: 18px;
+    margin-top: 9px;
+    
+}
+
+.re img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.co img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.ap img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.ca img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.ref img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/*book an appointment/create new Patient*/
+.point p{
+    margin-left: 738px;
+    margin-top: -28px;
+    margin-bottom: -73px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.point img{
+    margin-left: 679px;
+}
+
+.app p{
+    margin-left: 337px;
+    margin-top: 38px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.app img{
+    margin-left: 280px;
+    margin-top: -5px;
+    margin-bottom: -66px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.point p:hover {
+     background-color: #0077cc;
+ }
+
+.app p:hover {
+     background-color: #0077cc
+}     
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+      <div class="header">
+    <a href="dashbord.html#"><img src="Logo.png"></a>
+    <h5>EMR</h5>
+   
+            <div class="log">
+                
+      </div>
+
+    <div class="profile-container">
+    <div class="profile-photo">
+      <img src="christian.jpg" alt="Profile Photo">
+    </div>
+    
+
+         
+          <div class="profile-info">
+     <a href=""><h2>Christian Nepumoceno</h2></a>
+     
+    </div>
+  </div>
+
+
+
+  <div class="search">
+            <img src="see.png">
+            <input type="text" placeholder="Search">
+          </div>
+
+          
+      </div>
+
+      
+
+    <div class="sidebar">
+        <div class="Ho">
+            <img src="home.png">
+            <a href="Index.html">HOME</a>
+        </div>
+        <div class="me">
+            <img src="dashboard.png">
+            <a href="#">DASHBOARD</a>
+        </div>
+        <div class="re">
+            <img src="Records.png">
+            <a href="record.html">RECORDS</a>
+        </div>
+        <div class="co">
+            <img src="reminder.png">
+            <a href="#">REMINDERS</a>
+        </div>
+        <div class="ap">
+            <img src="appointment.png">
+            <a href="#">APPOINTMENTS</a>
+        </div>
+        <div class="ca">
+            <img src="care.png">
+            <a href="#">CARE PROVIDED</a>
+        </div>
+        <div class="ref">
+            <img src="refferal.png">
+            <a href="#">REFFERAL</a>
+        </div>
+
+    </div>
+
+    <div class="main">
+        <div class="top-bar">
+            <img src="dashboard.png">
+            <h1>Dashboard</h1>
+             <div>
+                <div class="point">
+                    <img src="add.png">
+                    <p>Create New Patient</p>
+                </div>
+                <div class="app">
+                    <img src="appointment.png">
+                    <p>Book an Appointment</p>
+                </div>
+                   
+            </div>
+        </div>
+
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <h2 id="patients-records">0</h2>
+                <p>Patients Records</p>
+            </div>
+            <div class="stat-box">
+                <h2 id="care-provided">0</h2>
+                <p>Care Provided</p>
+            </div>
+            <div class="stat-box">
+                <h2 id="inbound-referrals">0%</h2>
+                <p>Inbound Referrals</p>
+            </div>
+            <div class="stat-box">
+                <h2 id="appointments-today">0%</h2>
+                <p>Appointments Today</p>
+            </div>
+        </div>
+
+
+        <div class="bar-chart">
+            <h2>Top Diagnoses (Last 3 Months)</h2>
+            <div class="bar" style="--bar-width: 75%;">
+                <span>Dyslipidemia</span>
+                <div>15</div>
+            </div>
+            <div class="bar" style="--bar-width: 60%;">
+                <span>Hypertension</span>
+                <div>12</div>
+            </div>
+            <div class="bar" style="--bar-width: 50%;">
+                <span>Essential Hypertension</span>
+                <div>10</div>
+            </div>
+            <div class="bar" style="--bar-width: 25%;">
+                <span>DMZ</span>
+                <div>5</div>
+            </div>
+        </div>
+
+
+        <div class="calendar">
+            <h2>Appointments - December 2024</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("patients-records").innerText = 100;
+        document.getElementById("care-provided").innerText = 96;
+        document.getElementById("inbound-referrals").innerText = "0%";
+        document.getElementById("appointments-today").innerText = "0%";
+    </script>
+</head>
+<body>
+
+</body>
+</html>

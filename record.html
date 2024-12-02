@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+
+		body {
+			background-color: black;
+		}
+
+		.header {
+            background-color:darkred;
+            height: 90px;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+
+        }
+
+        h5 {
+          color: royalblue;
+        }
+
+        .header img {
+            height: 50px;
+            width: 45px;
+        }
+
+		
+
+
+/*Electronic Medical Record*/
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.record {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e9f7fe;
+  border-radius: 5px;
+}
+
+.record p {
+  font-size: 16px;
+  color: #333;
+}
+
+.record p strong {
+  color: #007bff;
+}
+
+
+
+
+/*side bar*/
+
+        .sidebar {
+            width: 20%;
+            height: 100vh;
+            background-color: ghostwhite;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #004d1a;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+            color: #fff;
+        }
+
+
+
+
+
+
+/*icons on side bar        */
+
+.Ho img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+}
+
+.me img{
+    height: 30px;
+    width: 30px;
+    margin-left: 18px;
+    margin-top: 9px;
+}
+
+.re img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.co img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.ap img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.ca img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.ref img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+
+
+
+	</style>
+
+
+
+</head>
+<body>
+
+		<div class="header">
+    	 <a href="dashbord.html#"><img src="Logo.png"></a>
+         <h5>EMR</h5>
+</div>
+
+
+	   <div class="sidebar">
+        <div class="Ho">
+            <img src="home.png">
+            <a href="Index.html">HOME</a>
+        </div>
+        <div class="me">
+            <img src="dashboard.png">
+            <a href="dashbord.html">DASHBOARD</a>
+        </div>
+        <div class="re">
+            <img src="Records.png">
+            <a href="record.html">RECORDS</a>
+        </div>
+        <div class="co">
+            <img src="reminder.png">
+            <a href="#">REMINDERS</a>
+        </div>
+        <div class="ap">
+            <img src="appointment.png">
+            <a href="#">APPOINTMENTS</a>
+        </div>
+        <div class="ca">
+            <img src="care.png">
+            <a href="#">CARE PROVIDED</a>
+        </div>
+        <div class="ref">
+            <img src="refferal.png">
+            <a href="#">REFFERAL</a>
+        </div>
+
+    </div>
+
+
+
+
+
+
+  <div class="container">
+    <h1>Electronic Medical Record</h1>
+    
+
+    <form id="patientForm">
+      <h2>Patient Information</h2>
+      <div class="input-group">
+        <label for="patientName">Full Name</label>
+        <input type="text" id="patientName" placeholder="Enter patient's full name" required>
+      </div>
+
+      <div class="input-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required>
+      </div>
+
+      <div class="input-group">
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="medicalHistory">Medical History</label>
+        <textarea id="medicalHistory" rows="4" placeholder="Enter past medical conditions" required></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="allergies">Known Allergies</label>
+        <textarea id="allergies" rows="2" placeholder="Enter allergies" required></textarea>
+      </div>
+
+      <button type="submit">Save Patient Record</button>
+    </form>
+
+    <div id="patientRecord" class="record">
+      <h2>Patient Record</h2>
+      <p><strong>Name:</strong> <span id="displayName"></span></p>
+      <p><strong>Date of Birth:</strong> <span id="displayDob"></span></p>
+      <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+      <p><strong>Medical History:</strong> <span id="displayMedicalHistory"></span></p>
+      <p><strong>Allergies:</strong> <span id="displayAllergies"></span></p>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

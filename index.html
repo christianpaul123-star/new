@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic Medical Record (EMR)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color:black;
+  padding: 20px;
+}
+
+.header {
+  background-color:darkred;
+  padding: 10px;
+  height: 130px;
+  position: sticky;
+  top: 0;
+  z-index: 35
+
+
+
+
+}
+
+.header img {
+  height: 50px;
+  width: 45px;
+
+}
+
+
+/*EMR*/
+h5 {
+  color:blue;
+  margin-left: 6px;
+  margin-top: 1px;
+}
+
+
+.About {
+  color: white;
+  float: right;
+  margin-top: -35px;
+  gap: 50px;
+  margin-right: 123px;
+  display: flex;
+  position: relative;
+  font-size: 20px;
+}
+
+
+/*search*/
+ 
+#l{
+  text-decoration: none;
+  color: white;
+
+}
+
+#l:hover {
+   text-decoration: underline;
+}
+
+.search {
+  float: right;
+  display: inline-flex;
+  margin-right: -100px;
+  margin-top: -5px;
+  height: 30px;
+
+}
+
+.search img {
+  height: 30px;
+  width: 40px;
+}
+
+
+
+
+/*slide shows*/
+
+
+
+.slideshow-container {
+
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: blanchedalmond ;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+
+  background-color: royalblue;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+.content{
+  background-color:darkred;
+  height: 386px;
+  width: 340px;
+}
+.content img{
+  padding: 10px;
+}
+.gallery{
+  display: flex;
+  gap: 40px;
+}
+.content p{
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+.content h2{
+  color: white;
+  margin-left: 5px;
+}
+
+iframe{
+  margin-left: 30px;
+  margin-top: 40px;
+  width: 700px;
+  height: 500px;
+}
+
+
+
+
+
+/*ICOND*/
+.fa {
+    padding: 5px;
+    font-size: 15px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+    .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+
+
+#back{
+  background-color: black;
+  height: 150px;
+  color: red;
+  padding: 20px;
+  text-align: center;
+
+}
+
+
+ 
+
+
+
+   
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="dashbord.html#"><img src="Logo.png"></a>
+    <h5>EMR</h5>
+
+
+      <div class="About">
+      <p>About Us</p>
+      <p>Help Support</p>
+      <a href="log in page.html" id="l">Log In</a>
+
+
+
+          <div class="log">
+      
+          </div>
+
+          <div class="search">
+            <img src="see.png">
+            <input type="text" placeholder="Search">
+          </div>
+
+               
+      </div>  
+      
+    </div>
+
+  </div>
+
+  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="new1.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="new2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="new3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<br>
+<br>
+<br>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+</script> 
+
+<div class="gallery">
+  <div class="content">
+      <img src="pic1.jpg">
+      <h2>Patient Data Storage</h2>
+      <p>Stores detailed patient information, including medical history, diagnoses, medications, allergies, immunization status, lab test results, and vital signs.</p>
+  </div>
+  <div class="content">
+      <img src="pic2.jpg">
+      <h2>Patient Management System</h2>
+      <p>A core feature of any EMS is the Patient Management System which tracks all patient interactions, medical history, and care plans.</p>
+  </div>
+  <div class="content"> 
+      <img src="pic3.jpg">
+      <h2>Billing and Invoicing</h2>
+      <p>The Billing System in an EMS manages financial transactions, invoicing, insurance claims, and patient payments.</p>
+  </div>
+  <div class="content">
+      <img src="pic4.jpg">
+      <h2>Appointment Scheduling</h2>
+      <p>Patients can schedule appointments with doctors or specialists, and doctors can manage their availability.</p>
+  </div>
+
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GQo2FerStNA?si=IAvbb8b5Nbsz4Zwz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.208106955734!2d124.67041567477393!3d8.479135091561881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff2bb191bf811%3A0x8475827f6affd4c2!2sCapitol%20University%20Medical%20Center%20Parking%20Lot!5e0!3m2!1sen!2sph!4v1732708152050!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+<footer>
+  <div id="back">
+    <p> Copy: 2024 Your Company. All rights reserved.</p>
+    <p> Connect With Us!</p>
+    <nav>
+
+    </nav>
+    <div>
+      <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F" class="fa fa-facebook"></a> 
+      <a href="https://x.com/?lang=en" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a> 
+      <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+ 
+  
+
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
